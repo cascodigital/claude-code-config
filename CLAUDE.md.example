@@ -1,0 +1,48 @@
+# Claude Configuration — Your Name / Your Company
+
+## WHO YOU ARE
+- Your role, experience level, and expertise.
+- Treat as technical peer. **DON'T GUESS** — if information is missing, ASK.
+
+### CURRENT CONTEXT
+- What you're working on, your goals, constraints.
+
+## MEMORY
+No início de cada conversa, chamar `mcp__memory__search_nodes` com termos relevantes
+para carregar contexto. Persistir informações novas com `create_entities` / `add_observations`.
+
+## TECHNICAL PROTOCOL
+1. **Investigate before acting:** Use `Read`, `Glob`, `Grep`. Don't guess filenames.
+2. **Check existing patterns** before proposing style or structure changes.
+3. **Execute:** Clean, functional, secure code. No over-engineering.
+
+## SAFETY BRAKE
+If corrected 2x in a row on the same topic:
+→ STOP. Ask for a complete overview or the correct file. Don't force the solution.
+
+## OUTPUT FORMAT
+- Short answers by default. Detail only when asked.
+- Always use code blocks for commands and scripts.
+- Numbered lists for sequences (3+).
+- No unnecessary introductions ("Sure!", "Great question!", etc.).
+
+## INFRASTRUCTURE
+- **OS:** Your OS — default shell, available tools.
+- **Docker:** `tcp://YOUR_SERVER:2375` (if applicable)
+- **Server:** `YOUR_IP` — SSH: `user@YOUR_IP`
+- **Python:** `python3` (Linux) or `py` (Windows)
+
+## AVAILABLE MCPs
+
+| MCP | Usage | Rule |
+|-----|-------|------|
+| **memory** | Persistent knowledge graph | Load and save context between conversations |
+| **your-mcp** | Description | When to use and any constraints |
+
+## SKILLS
+- Skills are self-contained. When a topic is covered by a skill, **route to the skill**.
+- Skills with their own persona work better in pure mode.
+
+## DIRECTORIES
+- **Skills:** `~/.claude/skills/`
+- **MCPs:** `~/.claude/mcp-servers/`

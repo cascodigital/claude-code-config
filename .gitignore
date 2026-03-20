@@ -1,0 +1,42 @@
+# Local per machine (don't sync)
+.credentials.json
+.claude.json
+.mcp-secrets
+settings.local.json
+stats-cache.json
+
+# Cache and sessions (auto-generated)
+cache/
+sessions/
+shell-snapshots/
+file-history/
+paste-cache/
+tasks/
+debug/
+backups/
+plugins/
+chrome/
+
+# History and local projects
+history.jsonl
+projects/
+
+# MCP servers (local deps, OS-specific venvs/node_modules)
+mcp-servers/
+
+# Temporary files
+*.log
+*.tmp
+
+# Binary and media files
+*.rar
+*.zip
+*.old
+*.bak
+*.mp3
+*.mp4
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.gif
